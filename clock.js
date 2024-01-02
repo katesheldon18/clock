@@ -1,4 +1,4 @@
-setInterval (displayTime, 1000);
+setInterval(displayTime, 1000);
 
 function displayTime() {
   let time = new Date();
@@ -6,9 +6,23 @@ function displayTime() {
   let minutes = time.getMinutes();
   let seconds = time.getSeconds();
 
-  hour = hour < 10 ? "0" + hour : hour;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
+  if (hour < 10) {
+    hour = "0" + hour;
+  } else {
+    hour = hour;
+  }
+
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  } else {
+    minutes = minutes;
+  }
+
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  } else {
+    seconds = seconds;
+  }
 
   let currentTime = hour + ":" + minutes + ":" + seconds;
 
